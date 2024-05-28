@@ -147,7 +147,7 @@ const getUserbyid = async (req, res) => {
     const id = req.params.id;
 
     const [rows] = await db.query('SELECT * FROM users WHERE id = ?', [id]);
-
+    
   
     res.send(rows);
   } catch (error) {
